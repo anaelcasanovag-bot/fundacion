@@ -48,11 +48,10 @@
           <div class="container-fluid">
             <a class="navbar-brand d-lg-none" href="#">Menú</a>
             
-            <div class="d-flex align-items-center text-white order-lg-last ms-auto me-3" style="cursor: pointer">
-                <i class="bi bi-cart-fill me-2 fs-4"></i>
-                <span class="badge bg-danger rounded-pill">0</span>
-            </div>
-
+              <div id="botonCarrito" class="d-flex align-items-center text-white order-lg-last ms-auto me-3" style="cursor: pointer">
+              <i class="bi bi-cart-fill me-2 fs-4"></i>
+              <span class="badge bg-danger rounded-pill">0</span>
+              </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -252,14 +251,13 @@
         }
 
         // 5. Activar el botón del carrito del menú
-        const btnCarrito = document.querySelector('.d-flex.align-items-center.text-white.ms-3');
-        if(btnCarrito){
-            btnCarrito.style.cursor = 'pointer'; // Manito al pasar el mouse
-            btnCarrito.addEventListener('click', () => {
-                new bootstrap.Modal(document.getElementById('modalCarrito')).show();
-                actualizarModal();
-            });
-        }
+        const btnCarrito = document.getElementById('botonCarrito');
+    if(btnCarrito){
+               btnCarrito.addEventListener('click', () => {
+            new bootstrap.Modal(document.getElementById('modalCarrito')).show();
+            actualizarModal();
+        });
+       }
 
         // 6. Ejecutar al iniciar
         document.addEventListener('DOMContentLoaded', () => {
