@@ -1,0 +1,7 @@
+El archivo principal (index.html) lo llame fundación.html para diferenciar el trabajo que estoy desarrollando para mi fundación
+poco a poco iré aprovechando las actividades del curso para desarrollar y mejorar la pagina web de la fundación.
+
+Si no es posible hacerlo espero que me lo informen para volver al trabajo base.
+
+
+Muchas Gracias!

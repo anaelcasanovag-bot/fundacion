@@ -1,0 +1,58 @@
+/*
+  Archivo: nih_styles.css
+  Estilos necesarios para aplicar el diseño de las dos barras.
+*/
+
+/* --- Ajuste de color para la barra principal (azul oscuro) --- */
+.navbar.bg-dark {
+  /* Color azul similar al de la referencia NIH */
+  background-color: #21364c !important;
+}
+
+/* --- Estilo para el enlace activo (línea azul debajo) --- */
+.active-nih {
+  position: relative;
+  padding-bottom: 5px !important; /* Ajusta el padding para la línea */
+}
+
+.active-nih::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Altura de la línea azul */
+  background-color: #007bff; /* Color azul brillante para la línea */
+  border-radius: 2px 2px 0 0;
+}
+
+/* --- Ajustes en el logo y texto de la barra superior --- */
+.logo-nih h1 {
+  font-size: 1.25rem; /* Ajuste de tamaño para el título */
+  line-height: 1.2;
+}
+
+.logo-nih p {
+  font-size: 0.8rem; /* Ajuste de tamaño para el subtítulo */
+  color: #6c757d;
+}
+
+/* --- Responsividad para la barra superior --- */
+@media (max-width: 991.98px) {
+  .top-nih-bar .container-fluid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  /* Oculta los enlaces secundarios y el buscador en móvil */
+  .top-nih-bar .d-flex.flex-column {
+    width: 100%;
+    align-items: center !important;
+    margin-top: 10px;
+  }
+  .top-nih-bar .input-group {
+    width: 100% !important;
+  }
+  .top-nih-bar .d-none.d-lg-block {
+    display: none !important;
+  }
+}

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/nih_styles.css" />
+    <title>Fundación NovaVida</title>
+  </head>
+</html>
+<body class="background-color: #d2d8df">
+  <div class="wrapper"> 
+        
+  <div class="content">
+
+    <div class="top-nih-bar py-3 border-bottom bg-white shadow-sm sticky-top" style="z-index: 1030;">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            
+            <a class="logo-nih d-flex align-items-center text-decoration-none" href="index.html">
+                <img src="assets/img/logofundacion.png" alt="Fundación NovaVida DBT1 Logo" class="me-3" style="width: 200x; height: 100px; object-fit: contain;">
+                <div class="text-start">
+                    <p class="small text-muted mb-0"></p>
+                </div>
+            </a>
+
+            <div class="d-flex flex-column align-items-end">
+                <div class="small mb-2 d-none d-lg-block">
+                    <a href="#" class="text-decoration-none text-muted me-3">Instagram</a> |
+                    <a href="#" class="text-decoration-none text-muted me-3">Dirección</a> |
+                    <a href="https://wa.me/+56939145612" target="_blank" class="text-decoration-none text-muted">Whatsapp</a>
+                </div>
+                <div class="input-group" style="width: 300px;">
+                    <input type="text" class="form-control form-control-sm" placeholder="Buscar en NovaVida" aria-label="Buscar">
+                    <button class="btn btn-primary btn-sm" type="button" onclick="mostrarMensajeBusqueda()" >Buscar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 sticky-top shadow" style="top: 88px; z-index: 1020;"> 
+      <div class="container-fluid">
+        <a class="navbar-brand d-lg-none" href="#">Menú</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"><i class="bi bi-house-door-fill me-1"></i> Página principal</a>
+            </li>    
+            <li class="nav-item">
+              <a class="nav-link" href="Index2.html">Sobre nosotros</a>
+            </li>         
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTemas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Cuidado diario                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownTemas">
+                    <li><a class="dropdown-item" href="Index5.html">Diabetes Tipo 1</a></li>
+                    <li><a class="dropdown-item" href="Index6.html">Nutrición</a></li>
+                    <li><a class="dropdown-item" href="Index7.html">Ejercicio</a></li>
+                    <li><a class="dropdown-item" href="Index8.html">Tecnologías de la diabetes</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Index3.html">Nuevas Investigaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Index4.html">Pregúntale a Casanova</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="index10.html">Tienda Solidaria</a>
+                </li>
+          </ul>
+       </div>
+      </div>
+    </nav>
+    <div class="container mt-4"> 
+      <div class="p-2 mb-0 bg-light rounded-3 ">
+        <div class="container-fluid py-2">
+            <h1 class="display-5 fw-bold text-center"> Fundación NovaVida DBT1
+            </h1>
+            <p class="col-md-8 fs-5 text-center mx-auto"> 
+                Seguiremos construyendo de a poco la pagina web de nuestra fundación, ¡Acompañanos en este proceso!
+            </p>
+        </div>
+      </div>
+
+    <div class="row">
+        <div class="p-5 mb-0">
+            <h2 class="text-center"> Profundizando en herramientas </h2>
+            <div class="row">
+    <div class="col-12 mt-5">
+        <h2 class="text-center">Lista de Prueba para jQuery</h3>
+       <div class="row">
+    
+    <h4 id="titulo-toggle" 
+      class="text-primary text-center mb-4 p-2 w-50 mx-auto text-decoration-underline" 
+      style="cursor: pointer; border: 2px ; border-radius: .3rem;">
+    
+      <i class="bi bi-arrow-down-square-fill me-2"></i> 
+      Formulario de Contacto
+   </h4>
+    
+    <div id="contenedor-formulario">
+        
+        <form id="formulario-contacto">
+            <ul id="lista-jquery" class="list-unstyled">
+                
+                <li class="mb-3">
+                    <div class="row">
+                        
+                        <div class="col-md-3 mb-3">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required 
+                            placeholder=" Ej. Eloísa">
+                            <span class="error-msg text-danger small" data-field="nombre"></span>
+                        </div>
+                        
+                        <div class="col-md-3 mb-3">
+                            <label for="apellido" class="form-label">Apellido:</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido" required
+                            placeholder=" Ej. Díaz">
+                            <span class="error-msg text-danger small" data-field="apellido"></span>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <label for="email" class="form-label">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="email" name="email" required
+                            placeholder=" Ej. Eloisa@ejemplo.cl">
+                            <span class="error-msg text-danger small" data-field="email"></span>                            
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <label for="motivo" class="form-label">Motivo de Contacto:</label>
+                            <select class="form-select" id="motivo" name="motivo" required>
+                            <option selected disabled value="">Selecciona uno...</option>                          
+                                <option value="consulta">Consulta General</option>
+                                <option value="sugerencia">Sugerencia</option>
+                                <option value="soporte">Otro Motivo</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                </li>
+                
+                <li class="mb-3">
+                    <label for="detalle" class="form-label">Detalle de Consulta:</label>
+                    
+                    <textarea class="form-control" id="detalle" name="detalle" rows="4" required maxlength="5000" placeholder="Mínimo 30 caracteres. Máximo 5.000 caracteres."></textarea>
+                    <small id="contador-detalle" class="form-text text-muted">
+                    5.000 caracteres restantes
+                     </small>
+                </li>
+                
+                <li class="mt-4 text-center">
+                    <button type="submit" class="btn btn-danger btn-lg">Enviar Formulario</button>
+                </li>
+
+            </ul>
+        </form>
+    </div>
+    </div>
+    </div>
+    </div>
+            <p class="text-center">Seguimos avanzando en este proceso de aprendizaje de Python!!!</p>
+        </div>
+        <div class="my-0 text-center">
+            <img
+                src="assets/img/segunda-imagen.png"
+                alt="Curso Python"
+                class="img-fluid "
+                style="width: 400px; height: 300px; object-fit: contain"
+            />
+        </div>
+<div class="text-center mb-4">
+            <a href="Index9.html" class="btn btn-primary btn-lg" role="button">
+                Ver Próximos Pasos
+            </a>
+        </div>
+     <div class="container mt-5">
+    <h3 class="text-danger text-center">Lista de Ejemplo</h3>
+    
+    <div class="text-center"> 
+        <button id="botonToggle" class="btn btn-primary mb-3">
+            Ocultar Lista
+        </button>
+        
+        <h5 id="agregarQuintoElemento" class="text-success" style="cursor: pointer;">
+            Haga clic aquí para añadir el Quinto Elemento
+        </h5>
+    </div>
+    
+    <div class="d-flex justify-content-center"> 
+        <ul id="miLista" class="list-unstyled text-center p-0">
+            <li>Elemento 1 (Original)</li>
+            <li>Elemento 2 (Original)</li>
+            <li>Elemento 3 (Original)</li>
+        </ul>
+    </div>
+</div>
+        
+        <p>Irémos actualizando
+            <strong class="text-danger">las nuevas habilidades </strong> que se vayan sumando al repertorio
+        </p>
+        <section class="mt-5">
+            <h3 class="text-danger">Conceptos Aprendidos</h3>
+            <p>
+                Hemos repasado la estructura HTML, el manejo de visual studio code y la
+                integración de Python con HTML.
+            </p>
+            <p>
+                Recordemos que la
+                <strong class="text-danger">semántica y la legibilidad</strong> son
+                cruciales.
+                <h3 class="text-danger mt-4">Utilidad de lo aprendido</h3>
+                <p> Los conocimientos aprendidos hasta ahora nos permiten crear archivos HTML locales simples e insertar imagenes estáticas para personalizar la 
+                    página web 
+                </p>
+        </section>
+        <div class="row">
+            <div class="col-12 col-lg-4">
+            </div> 
+            
+            <div class="col-12 col-lg-4"> 
+                <div class="card bg-warning-subtle p-3 mt-4 mt-lg-0 border-primary shadow-sm w-100 mx-auto">
+                    <h4 class="text-primary text-center">Referencias Técnicas</h4>
+                    <div class="text-center">
+                        <a href="Index9.html" class="btn btn-primary btn-sm" role="button">Revisa nuestro contenido adicional aquí</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="alert alert-success mt-5 text-center" role="alert"> Hemos integrado lo básico de Bootstrap.
+    </div>
+
+    <div class="my-4 text-center">
+      <img
+        src="assets/img/primera-imagen.jpg"
+        alt="Curso Python"
+        class="img-fluid rounded shadow-lg"
+        style="width: 800px; height: 600px"
+      />
+    </div>
+
+    <div class="col-12 col-lg-12"> 
+        <div class="card bg-dark-subtle p-3 mt-4 mt-lg-0 border-primary shadow-sm w-75 mx-auto">
+            <h4 class="text-primary text-center">Referencias Técnicas</h4>
+            <div class="text-center"> 
+                <a href="Index9.html" class="btn btn-primary btn-sm" role="button">Revisa nuestro contenido adicional aquí</a>
+            </div>
+        </div>
+    </div> 
+
+    <div class="alert alert-success mt-5 text-center" role="alert">
+      ¡Ahora eres responsivo!
+    </div>
+  </div>
+    <div class="container text-center mt-5 mb-5">
+   <button type="button" class="btn btn-success btn-lg"
+    data-bs-toggle="modal" 
+    data-bs-target="#ejemploModal">
+      Ver Plugin de Bootstrap
+    </button>
+
+</div> 
+  <footer class="text-center py-3 mt-5 bg-dark text-white">
+
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center">
+        <img src="assets/img/Luffy.jpeg" alt="Luffy sonriendo"class="rounded-circle me-2" style="width: 60px; height: 60px; object-fit: cover;" />
+          <p class="mb-0">
+            <strong class="text-info">
+            Anael Arturo Casanova Gutiérrez © 2025
+          </strong>
+        </p>
+      </div>
+    </div>
+    
+    
+  </footer>
+  </div>
+    <a href="#" 
+      id="btn-ir-arriba" 
+      class="position-fixed rounded-circle shadow-lg d-flex align-items-center justify-content-center d-none
+              bg-dark bg-opacity-45 text-white border border-6 border-white"
+      style="z-index:1050; width:45px; height:45px; right:15px; bottom:20px;">
+    <i class="bi bi-arrow-up fs-1"></i>
+  </a>
+
+  <div class="modal fade" id="ejemploModal" tabindex="-1" aria-labelledby="ejemploModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ejemploModalLabel">¡Felicidades por tu avance!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Has incorporado con éxito un plugin de Bootstrap (el Modal). Esto demuestra que tu configuración de jQuery y Bootstrap es correcta.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+<script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/jquery-3.7.1.js"></script>
+
+  <script>
+
+    //JS Puro
+      function mostrarMensajeBusqueda() {
+        alert("Estamos trabajando para que esta función esté disponible para ti."); 
+      }
+      
+      function activarMenu() {
+        //  Obtener la ruta de la página actual 
+        var currentPath = window.location.pathname.split("/").pop(); 
+        
+        // Si   el nombre de archivo está vacío (ej: "/")
+        if (currentPath === '' || currentPath.toLowerCase() === 'index.html') {
+            currentPath = 'index.html'; 
+        }
+
+        // Obtener todos los enlaces de navegación dentro del menú principal
+        var navLinks = document.querySelectorAll('#navbarNav .navbar-nav .nav-item .nav-link');
+
+        navLinks.forEach(link => {
+            // Eliminar la clase activa de todos los enlaces primero
+            link.classList.remove('active-nih');
+
+            // Comparar el 'href' del enlace con la página actual
+            var linkPath = link.getAttribute('href');
+            
+            if (linkPath && linkPath.toLowerCase() === currentPath.toLowerCase()) {
+                // Aplicar la clase 'active-nih' al enlace
+                link.classList.add('active-nih');
+            }
+        });
+      }
+      document.addEventListener("DOMContentLoaded", activarMenu);
+
+      // Código JQuery
+
+      $(document).ready(function() {
+
+        // DEFINICIONES DE REGLAS (Fuera de eventos)
+        var regexTexto = /^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+$/; 
+        var regexEmail = /^[^@\s]+@[^@\s]+\.[A-Za-z]{2,4}$/;
+
+        //MANIPULACIÓN DEL DOM CLÁSICA (Al cargar la página) 
+
+        // AGREGA CUARTO ELEMENTO Y CAMBIA COLORES
+        $("#miLista li").css("color", "#0f0e4e").css("font-weight", "bold");
+        $("#miLista").append('<li class="item-4">Elemento 4 (Añadido Dinámicamente al cargar)</li>');
+        $("#miLista li.item-4").css("color", "purple");
+
+        // TOGGLE DEL FORMULARIO DE CONTACTO
+        $("#titulo-toggle").on("click", function() {
+            $("#contenedor-formulario").slideToggle(400);
+            var icon = $(this).find('i');
+            if (icon.hasClass('bi-arrow-down-square-fill')) {
+                icon.removeClass('bi-arrow-down-square-fill').addClass('bi-arrow-up-square-fill');
+            } else {
+                icon.removeClass('bi-arrow-up-square-fill').addClass('bi-arrow-down-square-fill');
+            }
+        });
+
+        // TOGGLE DE LA LISTA DE EJEMPLO 
+        $("#botonToggle").on("click", function() {
+            $("#miLista").slideToggle(400); 
+
+            // Alternar el texto del botón
+            let textoActual = $(this).text(); 
+            // La lista está visible inicialmente, el texto es 'Ocultar Lista'
+            if (textoActual === "Mostrar Lista") {
+                $(this).text("Ocultar Lista");
+            } else {
+                $(this).text("Mostrar Lista");
+            }
+        });
+
+        // AÑADIR QUINTO ELEMENTO AL CLIC 
+        $("#agregarQuintoElemento").on("click", function() {
+            if ($("#miLista li").length < 5) {
+                $("#miLista").append('<li class="item-5">Elemento 5 (Añadido con Click)</li>');
+                $("#miLista li.item-5").css("color", "red").css("font-style", "italic");
+                $(this).hide(); 
+            }
+        });
+        
+        // CONTADOR DE CARACTERES (Input)
+        $("#detalle").on("input", function() {
+            var max_length = $(this).attr("maxlength");
+            var current_length = $(this).val().length;
+            var remaining = max_length - current_length;
+            
+            $("#contador-detalle").text(remaining + " caracteres restantes");
+
+            if (remaining <= 100) {
+                $("#contador-detalle").removeClass("text-muted").addClass("text-danger");
+            } else {
+                $("#contador-detalle").removeClass("text-danger").addClass("text-muted");
+            }
+        });
+
+        // VALIDACIÓN DEL FORMULARIO (Submit)
+        $("#formulario-contacto").on("submit", function(e) {
+            e.preventDefault(); 
+            var hayErrores = false;
+
+            // Limpiar estados previos
+            $(".error-msg").text("");
+            $(".form-control").removeClass("is-invalid");
+
+            
+            // VALIDAR NOMBRE
+            var nombre = $("#nombre");
+            if (!regexTexto.test(nombre.val())) {
+                $('[data-field="nombre"]').text("Solo se permiten letras y espacios.");
+                nombre.addClass("is-invalid");
+                hayErrores = true;
+            }
+            
+            // VALIDAR APELLIDO
+            var apellido = $("#apellido");
+            if (!regexTexto.test(apellido.val())) {
+                $('[data-field="apellido"]').text("Solo se permiten letras y espacios.");
+                apellido.addClass("is-invalid");
+                hayErrores = true;
+            }
+
+            // VALIDAR CORREO
+            var email = $("#email");
+            if (!regexEmail.test(email.val())) {
+                $('[data-field="email"]').text("El formato debe ser usuario@dominio.com, .cl, .net, etc.");
+                email.addClass("is-invalid");
+                hayErrores = true;
+            }
+
+            // VALIDAR MOTIVO DE CONTACTO
+            var motivo = $("#motivo");
+            if (motivo.val() === null || motivo.val() === "") {
+                $('[data-field="motivo"]').text("Debe seleccionar un motivo.");
+                motivo.addClass("is-invalid");
+                hayErrores = true;
+            }
+            
+            // VALIDAR DETALLE DE CONSULTA (Mínimo 30 caracteres)
+            var detalle = $("#detalle");
+            if (detalle.val().length < 30) {
+                $('[data-field="detalle"]').text("El detalle de la consulta debe tener al menos 30 caracteres.");
+                detalle.addClass("is-invalid");
+                hayErrores = true;
+            }
+            
+            // RESULTADO FINAL 
+            if (hayErrores) {
+                $("#contenedor-formulario").slideDown(400);
+            } else {
+                alert("¡Formulario validado con éxito!"); 
+            }
+        });
+    });
+    </script>
+    
+    
+    
+    
+</body>
+</html>
+ 
