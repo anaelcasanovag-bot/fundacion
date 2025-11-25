@@ -36,22 +36,20 @@
           class="top-nih-bar py-3 border-bottom bg-white shadow-sm sticky-top"
           style="z-index: 1030"
         >
-          <div
-            class="container-fluid d-flex justify-content-between align-items-center"
-          >
+          <div class="container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center">
             <a
-              class="logo-nih d-flex align-items-center text-decoration-none"
+              class="logo-nih d-flex align-items-center text-decoration-none mb-3 mb-lg-0"
               href="index.html"
             >
               <img
                 src="assets/img/logofundacion.png"
                 alt="Logo"
-                class="me-3"
-                style="width: 200px; height: 100px; object-fit: contain"
+                class="me-0 me-lg-3"
+                style="width: 200px; height: 80px; object-fit: contain"
               />
             </a>
-            <div class="d-flex flex-column align-items-end">
-              <div class="small mb-2 d-none d-lg-block">
+            <div class="d-flex flex-column align-items-center align-items-lg-end w-100">
+              <div class="small mb-2 text-center text-lg-end">
                 <a href="#" class="text-decoration-none text-muted me-3"
                   >Instagram</a
                 >
@@ -67,7 +65,7 @@
                   >Whatsapp</a
                 >
               </div>
-              <div class="input-group" style="width: 300px">
+              <div class="input-group" style="width: 100%; max-width: 300px;">
                 <input
                   type="text"
                   class="form-control form-control-sm"
@@ -85,50 +83,39 @@
           </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 sticky-top shadow" style="top: 88px; z-index: 1020;"> 
-      <div class="container-fluid">
-        <a class="navbar-brand d-lg-none" href="#">Menú</a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html"><i class="bi bi-house-door-fill me-1"></i> Página principal</a>
-            </li>    
-            <li class="nav-item">
-              <a class="nav-link" href="Index2.html">Sobre nosotros</a>
-            </li>         
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTemas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Cuidado diario                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownTemas">
-                    <li><a class="dropdown-item" href="Index5.html">Diabetes Tipo 1</a></li>
-                    <li><a class="dropdown-item" href="Index6.html">Nutrición</a></li>
-                    <li><a class="dropdown-item" href="Index7.html">Ejercicio</a></li>
-                    <li><a class="dropdown-item" href="Index8.html">Tecnologías de la diabetes</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Index3.html">Nuevas Investigaciones</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Index4.html">Pregúntale a Casanova</a>
-            </li>
-            <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="index10.html"> <i class="bi bi-shop me-1"></i>
-                   </i> Tienda Solidaria</a>
-                </li>
-          </ul>
-              <div
-                class="d-flex align-items-center text-white ms-3"
-                style="cursor: pointer"
-              >
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 sticky-top shadow" style="top: 88px; z-index: 1020;">
+          <div class="container-fluid">
+            
+            <a class="navbar-brand d-lg-none" href="#">Menú</a>
+
+            <div class="d-flex align-items-center text-white order-lg-last ms-auto me-3" style="cursor: pointer">
                 <i class="bi bi-cart-fill me-2 fs-4"></i>
                 <span class="badge bg-danger rounded-pill">0</span>
-              </div>
             </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Página principal</a></li>
+                <li class="nav-item"><a class="nav-link" href="Index2.html">Sobre nosotros</a></li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cuidado diario</a>
+                   <ul class="dropdown-menu">
+                       <li><a class="dropdown-item" href="Index5.html">Diabetes Tipo 1</a></li>
+                       <li><a class="dropdown-item" href="Index6.html">Nutrición</a></li>
+                       <li><a class="dropdown-item" href="Index7.html">Ejercicio</a></li>
+                       <li><a class="dropdown-item" href="Index8.html">Tecnologías</a></li>
+                   </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="Index3.html">Investigaciones</a></li>
+                <li class="nav-item"><a class="nav-link" href="Index4.html">Pregúntale a Casanova</a></li>
+                <li class="nav-item"><a class="nav-link active fw-bold text-warning" href="index10.html"><i class="bi bi-shop me-1"></i> Tienda Solidaria</a></li>
+              </ul>
+              </div>
+
           </div>
         </nav>
 
