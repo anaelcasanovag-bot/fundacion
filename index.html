@@ -81,6 +81,10 @@
                   <a class="nav-link" href="index10.html">Tienda Solidaria</a>
                 </li>
           </ul>
+          <div class="d-flex align-items-center text-white ms-3" style="cursor: pointer">
+          <i class="bi bi-cart-fill me-2 fs-4"></i>
+          <span class="badge bg-danger rounded-pill">0</span>
+      </div>
        </div>
       </div>
     </nav>
@@ -278,7 +282,7 @@
 
     <div class="container">
       <div class="d-flex justify-content-center align-items-center">
-        <img src="assets/img/Luffy.jpeg" alt="Luffy sonriendo"class="rounded-circle me-2" style="width: 60px; height: 60px; object-fit: cover;" />
+        <img src="assets/img/luffy.jpeg" alt="Luffy sonriendo"class="rounded-circle me-2" style="width: 60px; height: 60px; object-fit: cover;" />
           <p class="mb-0">
             <strong class="text-info">
             Anael Arturo Casanova Gutiérrez © 2025
@@ -315,9 +319,24 @@
     </div>
   </div>
 </div>
-
-
 </div>
+<div class="modal fade" id="modalCarrito" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Tu Carrito de Compras</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" id="contenidoCarrito">
+            <p class="text-center text-muted">Tu carrito está vacío</p>
+          </div>
+          <div class="modal-footer d-flex justify-content-between">
+            <span class="fw-bold text-primary">Total: $<span id="totalCarrito">0</span></span>
+            <button class="btn btn-success" onclick="alert('¡Gracias por tu compra!')">Finalizar Compra</button>
+          </div>
+        </div>
+      </div>
+    </div>
 <script src="assets/js/smooth-scroll.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script
@@ -485,7 +504,77 @@
     });
     </script>
     
-    
+    <script>
+        // 1. Cargar carrito de la memoria
+        let carrito = JSON.parse(localStorage.getItem('carritoNovaVida')) || [];
+
+        // 2. Actualizar el numerito rojo (Badge) apenas carga la página
+        function actualizarBadge() {
+            const total = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+            const badge = document.querySelector('.badge'); // Busca el circulito rojo
+            if(badge) {
+                badge.textContent = total;
+                badge.classList.toggle('bg-success', total > 0);
+                badge.classList.toggle('bg-danger', total === 0);
+            }
+        }
+
+        // 3. Guardar cambios (por si borras algo desde el modal en el Home)
+        function guardarCarrito() {
+            localStorage.setItem('carritoNovaVida', JSON.stringify(carrito));
+            actualizarBadge();
+            actualizarModal();
+        }
+
+        // 4. Lógica para mostrar los productos dentro del Modal
+        function actualizarModal() {
+            const contenido = document.getElementById('contenidoCarrito');
+            const totalElement = document.getElementById('totalCarrito');
+            if (!contenido || !totalElement) return;
+
+            if (carrito.length === 0) {
+                contenido.innerHTML = '<p class="text-center text-muted">Tu carrito está vacío</p>';
+                totalElement.textContent = '0';
+                return;
+            }
+
+            let html = '<div class="list-group">';
+            let total = 0;
+            carrito.forEach((item, index) => {
+                const subtotal = item.precio * item.cantidad;
+                total += subtotal;
+                html += `
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div><strong>${item.nombre}</strong><br><small class="text-muted">${item.cantidad} × $${item.precio.toLocaleString()}</small></div>
+                    <div><strong>$${subtotal.toLocaleString()}</strong>
+                    <button class="btn btn-sm btn-danger ms-3" onclick="eliminarDelCarrito(${index})"><i class="bi bi-trash"></i></button></div>
+                </div>`;
+            });
+            html += '</div>';
+            contenido.innerHTML = html;
+            totalElement.textContent = total.toLocaleString();
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            guardarCarrito();
+        }
+
+        // 5. Activar el botón del carrito del menú
+        const btnCarrito = document.querySelector('.d-flex.align-items-center.text-white.ms-3');
+        if(btnCarrito){
+            btnCarrito.style.cursor = 'pointer'; // Manito al pasar el mouse
+            btnCarrito.addEventListener('click', () => {
+                new bootstrap.Modal(document.getElementById('modalCarrito')).show();
+                actualizarModal();
+            });
+        }
+
+        // 6. Ejecutar al iniciar
+        document.addEventListener('DOMContentLoaded', () => {
+            actualizarBadge();
+        });
+    </script>
     
     
 </body>
