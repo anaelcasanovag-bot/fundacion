@@ -120,3 +120,24 @@ body {
 .navbar .badge {
   background-color: #d62828 !important; /* rojo fuerte para que resalte */
 }
+/* Espacio para que el contenido no quede tapado por el menú fijo */
+body {
+  padding-top: 210px; /* Ajusta este valor si el menú tapa el título */
+}
+
+/* Transición suave */
+.transition-header {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Clase para esconder el menú hacia arriba */
+.header-hidden {
+  transform: translateY(-100%);
+}
+
+/* Ajuste para móvil: menos padding porque el menú es más alto */
+@media (max-width: 991px) {
+  body {
+    padding-top: 260px;
+  }
+}

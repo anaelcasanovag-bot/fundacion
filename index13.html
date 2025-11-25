@@ -19,139 +19,139 @@
   <body class="bg-info-subtle">
     <div class="wrapper d-flex flex-column min-vh-100">
       <div class="content flex-grow-1">
-        <div
-          class="top-nih-bar py-3 border-bottom bg-white shadow-sm sticky-top"
-          style="z-index: 1030"
-        >
-          <div
-            class="container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center"
-          >
-            <a
-              class="logo-nih d-flex align-items-center text-decoration-none mb-3 mb-lg-0"
-              href="index.html"
-            >
-              <img
-                src="assets/img/logofundacion.png"
-                alt="Logo"
-                class="me-0 me-lg-3"
-                style="width: 200px; height: 80px; object-fit: contain"
-              />
-            </a>
+        <header id="header-principal" class="fixed-top transition-header">
+          <div class="top-nih-bar py-2 border-bottom bg-white shadow-sm">
             <div
-              class="d-flex flex-column align-items-center align-items-lg-end w-100"
+              class="container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center"
             >
-              <div class="small mb-2 text-center text-lg-end">
-                <a href="#" class="text-decoration-none text-muted me-3"
-                  >Instagram</a
-                >
-                |
-                <a href="#" class="text-decoration-none text-muted me-3"
-                  >Dirección</a
-                >
-                |
-                <a
-                  href="https://wa.me/+56939145612"
-                  target="_blank"
-                  class="text-decoration-none text-muted"
-                  >Whatsapp</a
-                >
-              </div>
-              <div class="input-group" style="width: 100%; max-width: 300px">
-                <input
-                  type="text"
-                  class="form-control form-control-sm"
-                  placeholder="Buscar en NovaVida"
+              <a
+                class="logo-nih d-flex align-items-center text-decoration-none mb-1 mb-lg-0"
+                href="index.html"
+              >
+                <img
+                  src="assets/img/logofundacion.png"
+                  alt="Logo"
+                  class="me-0 me-lg-3"
+                  style="width: 180px; height: auto; object-fit: contain"
                 />
-                <button
-                  class="btn btn-primary btn-sm"
-                  type="button"
-                  onclick="mostrarMensajeBusqueda()"
-                >
-                  Buscar
-                </button>
+              </a>
+              <div
+                class="d-flex flex-column align-items-center align-items-lg-end w-100"
+              >
+                <div class="small mb-1 text-center text-lg-end">
+                  <a href="#" class="text-decoration-none text-muted me-2"
+                    >Instagram</a
+                  >
+                  |
+                  <a href="#" class="text-decoration-none text-muted mx-2"
+                    >Dirección</a
+                  >
+                  |
+                  <a
+                    href="https://wa.me/+56939145612"
+                    target="_blank"
+                    class="text-decoration-none text-muted ms-2"
+                    >Whatsapp</a
+                  >
+                </div>
+                <div class="input-group" style="width: 100%; max-width: 300px">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    placeholder="Buscar en NovaVida"
+                  />
+                  <button
+                    class="btn btn-primary btn-sm"
+                    type="button"
+                    onclick="mostrarMensajeBusqueda()"
+                  >
+                    Buscar
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <nav
-          class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 sticky-top shadow"
-          style="top: 88px; z-index: 1020"
-        >
-          <div class="container-fluid">
-            <a class="navbar-brand d-lg-none" href="#">Menú</a>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-0 shadow">
+            <div class="container-fluid">
+              <a class="navbar-brand d-lg-none" href="#">Menú</a>
 
-            <div
-              class="d-flex align-items-center text-white order-lg-last ms-auto me-3"
-              style="cursor: pointer"
-            >
-              <i class="bi bi-cart-fill me-2 fs-4"></i>
-              <span class="badge bg-danger rounded-pill">0</span>
+              <div
+                class="d-flex align-items-center text-white order-lg-last ms-auto me-3"
+                style="cursor: pointer"
+              >
+                <i class="bi bi-cart-fill me-2 fs-4"></i>
+                <span class="badge bg-danger rounded-pill">0</span>
+              </div>
+
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Página principal</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Index2.html">Sobre nosotros</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      >Cuidado diario</a
+                    >
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="Index5.html"
+                          >Diabetes Tipo 1</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="Index6.html"
+                          >Nutrición</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="Index7.html"
+                          >Ejercicio</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="Index8.html"
+                          >Tecnologías</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Index3.html">Investigaciones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Index4.html"
+                      >Pregúntale a Casanova</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active fw-bold text-warning"
+                      href="index10.html"
+                      ><i class="bi bi-shop me-1"></i> Tienda Solidaria</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
-
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Página principal</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Index2.html">Sobre nosotros</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    >Cuidado diario</a
-                  >
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="Index5.html"
-                        >Diabetes Tipo 1</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="Index6.html">Nutrición</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="Index7.html">Ejercicio</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="Index8.html"
-                        >Tecnologías</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Index3.html">Investigaciones</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Index4.html"
-                    >Pregúntale a Casanova</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link active fw-bold text-warning"
-                    href="index10.html"
-                    ><i class="bi bi-shop me-1"></i> Tienda Solidaria</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+          </nav>
+        </header>
 
         <div class="container my-5">
           <a href="index10.html" class="btn btn-outline-secondary mb-4">
@@ -385,6 +385,31 @@
 
       document.addEventListener('DOMContentLoaded', () => {
         actualizarBadge();
+      });
+    </script>
+    <script>
+      let lastScrollTop = 0;
+      const header = document.getElementById('header-principal');
+
+      window.addEventListener('scroll', function () {
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        // Si el scroll es mayor a 100px (para no molestar al principio)
+        if (scrollTop > 100) {
+          if (scrollTop > lastScrollTop) {
+            // BAJANDO -> Esconder menú
+            header.classList.add('header-hidden');
+          } else {
+            // SUBIENDO -> Mostrar menú
+            header.classList.remove('header-hidden');
+          }
+        } else {
+          // Si estamos arriba del todo, mostrar siempre
+          header.classList.remove('header-hidden');
+        }
+
+        lastScrollTop = scrollTop;
       });
     </script>
   </body>
