@@ -93,3 +93,9 @@ El proyecto sigue una arquitectura organizada para facilitar el mantenimiento:
     Desarrollado como parte del portafolio de desarrollo web Full Stack.
 
 ```
+
+### links de GitHub
+
+# Pages: https://anaelcasanovag-bot.github.io/fundacion/
+
+# Repositorio: https://github.com/anaelcasanovag-bot/fundacion.git
